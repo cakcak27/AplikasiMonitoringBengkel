@@ -209,10 +209,6 @@ public class UIPengguna extends javax.swing.JPanel {
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
 
-        jTextField2.setText("jTextField2");
-
-        jTextField3.setText("jTextField3");
-
         btClose.setText("Close");
         btClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

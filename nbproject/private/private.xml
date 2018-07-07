@@ -5,7 +5,10 @@
         <group>
             <file>file:/D:/java/hasilservlet/AplikasiDesktopMonitoring/src/com/javacodegeeks/snippets/desktop/RemoveTabInJTabbedPane.java</file>
             <file>file:/D:/java/hasilservlet/AplikasiDesktopMonitoring/src/com/ikbal/app/ui/UIMenuUtama.java</file>
+            <file>file:/D:/java/hasilservlet/AplikasiDesktopMonitoring/src/com/ikbal/app/ui/panel/UIPengguna.java</file>
+            <file>file:/D:/java/hasilservlet/AplikasiDesktopMonitoring/src/com/ikbal/app/ui/panel/UIKendaraan.java</file>
             <file>file:/D:/java/hasilservlet/AplikasiDesktopMonitoring/src/com/ikbal/app/ui/panel/UIWorkOrder.java</file>
+            <file>file:/D:/java/hasilservlet/AplikasiDesktopMonitoring/src/com/ikbal/app/ui/panel/UIKaryawan.java</file>
         </group>
     </open-files>
 </project-private>
