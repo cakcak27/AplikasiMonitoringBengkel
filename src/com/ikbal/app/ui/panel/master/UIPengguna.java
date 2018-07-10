@@ -3,11 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ikbal.app.ui.panel;
+package com.ikbal.app.ui.panel.master;
 
-//import com.ikbal.app.ui.UIMenuUtama;
-
-import com.ikbal.app.ui.UIMenuUtama;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Window;
@@ -354,10 +351,5 @@ public class UIPengguna extends javax.swing.JPanel {
     private javax.swing.JTextField tfNik;
     private javax.swing.JTextField tfNoTelp;
     // End of variables declaration//GEN-END:variables
-    private java.awt.Component tab = this;
-    
-    public void component(){
-        this.tab = new UIPelanggan();
-    }
-    
+
 }

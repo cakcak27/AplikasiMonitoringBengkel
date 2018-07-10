@@ -6,7 +6,12 @@
 package com.ikbal.app.ui;
 
 import com.ikbal.app.ui.component.tambahan.JTabbedPaneCloseButton;
-import com.ikbal.app.ui.panel.UIPengguna;
+import com.ikbal.app.ui.panel.master.UIKaryawan;
+import com.ikbal.app.ui.panel.master.UIKendaraan;
+import com.ikbal.app.ui.panel.master.UIPelanggan;
+import com.ikbal.app.ui.panel.master.UIPengguna;
+import com.ikbal.app.ui.panel.master.UISparepart;
+import com.ikbal.app.ui.panel.transaksi.UIWorkOrder;
 import java.awt.Button;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -19,6 +24,10 @@ import java.awt.Toolkit;
  */
 public class UIMenuUtama extends javax.swing.JFrame {
     private static final long serialVersionUID = 1L;
+    private UIPelanggan pelanggan;
+    private UIKendaraan kendaraan;
+    private UIKaryawan karyawan;
+    private UISparepart sparepart;
 
     /**
      * Creates new form UIMenuUtama
@@ -42,12 +51,17 @@ public class UIMenuUtama extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         mIPengguna = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        nmPelanggan = new javax.swing.JMenuItem();
+        mnKendaraan = new javax.swing.JMenuItem();
+        mnSparepart = new javax.swing.JMenuItem();
+        mnKaryawan = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplikasi Monitoring Bengkel");
+        setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         setLocation(new java.awt.Point(0, 0));
         setLocationByPlatform(true);
         setName("UIMenuUtama"); // NOI18N
@@ -66,6 +80,40 @@ public class UIMenuUtama extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu3.setText("Master");
+
+        nmPelanggan.setText("Pelanggan");
+        nmPelanggan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nmPelangganActionPerformed(evt);
+            }
+        });
+        jMenu3.add(nmPelanggan);
+
+        mnKendaraan.setText("Kendaraan");
+        mnKendaraan.setName("mnKendaraan"); // NOI18N
+        mnKendaraan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnKendaraanActionPerformed(evt);
+            }
+        });
+        jMenu3.add(mnKendaraan);
+
+        mnSparepart.setText("Sparepart");
+        mnSparepart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnSparepartActionPerformed(evt);
+            }
+        });
+        jMenu3.add(mnSparepart);
+
+        mnKaryawan.setText("Karyawan");
+        mnKaryawan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnKaryawanActionPerformed(evt);
+            }
+        });
+        jMenu3.add(mnKaryawan);
+
         jMenuBar1.add(jMenu3);
 
         jMenu2.setText("Transaksi");
@@ -106,10 +154,34 @@ public class UIMenuUtama extends javax.swing.JFrame {
     }//GEN-LAST:event_mIPenggunaActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        this.wo = new com.ikbal.app.ui.panel.UIWorkOrder();
+        this.wo = new com.ikbal.app.ui.panel.transaksi.UIWorkOrder();
         tabPanel.addTab("Perintah Kerja", wo);
         tabPanel.setSelectedComponent(wo);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void nmPelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nmPelangganActionPerformed
+        this.pelanggan = new com.ikbal.app.ui.panel.master.UIPelanggan();
+        tabPanel.addTab("Pelanggan", pelanggan);
+        tabPanel.setSelectedComponent(pelanggan);
+    }//GEN-LAST:event_nmPelangganActionPerformed
+
+    private void mnKendaraanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnKendaraanActionPerformed
+        this.kendaraan = new com.ikbal.app.ui.panel.master.UIKendaraan();
+        tabPanel.addTab("Kendaraan", kendaraan);
+        tabPanel.setSelectedComponent(kendaraan);
+    }//GEN-LAST:event_mnKendaraanActionPerformed
+
+    private void mnKaryawanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnKaryawanActionPerformed
+        this.karyawan = new com.ikbal.app.ui.panel.master.UIKaryawan();
+        tabPanel.addTab("Karyawan", karyawan);
+        tabPanel.setSelectedComponent(karyawan);
+    }//GEN-LAST:event_mnKaryawanActionPerformed
+
+    private void mnSparepartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnSparepartActionPerformed
+        this.sparepart = new com.ikbal.app.ui.panel.master.UISparepart();
+        tabPanel.addTab("Sparepart", sparepart);
+        tabPanel.setSelectedComponent(sparepart);
+    }//GEN-LAST:event_mnSparepartActionPerformed
 
     
     
@@ -152,7 +224,7 @@ public class UIMenuUtama extends javax.swing.JFrame {
     }
 
     private UIPengguna pengguna;
-    private com.ikbal.app.ui.panel.UIWorkOrder wo;
+    private UIWorkOrder wo;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -161,6 +233,10 @@ public class UIMenuUtama extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem mIPengguna;
+    private javax.swing.JMenuItem mnKaryawan;
+    private javax.swing.JMenuItem mnKendaraan;
+    private javax.swing.JMenuItem mnSparepart;
+    private javax.swing.JMenuItem nmPelanggan;
     /*
     private org.netbeans.modules.form.InvalidComponent tabPanel;
     */
